@@ -10,12 +10,23 @@ export default function Contact() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
     if (!formData.name.trim() || !formData.email.trim()) {
       toast.error("Please fill the required blank", { position: "bottom-right", autoClose: 3000 });
       return;
     }
+    await fetch("https://feedbackbackend-q0y7.onrender.com/api/v1/createFeedBack", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({
+    name: formData.name,
+    email: formData.email,
+    comment: formData.comment,
+  }),
+});
     toast.success("Thank you for commenting!", { position: "bottom-right", autoClose: 3000 });
     setFormData({ name: "", email: "", comment: "" });
   };
