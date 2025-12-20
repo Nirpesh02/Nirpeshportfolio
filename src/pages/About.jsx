@@ -21,7 +21,7 @@ export default function About() {
 
           <div className="w-24 h-1 bg-purple-300 mb-6 rounded-full mx-auto md:mx-0"></div>
 
-          <p className="text-xl md:text-2xl text-gray-800 leading-relaxed">
+          <p className="text-xl md:text-2xl text-gray-800 leading-relaxed text-left">
             I am a creative web developer passionate about designing and building modern,
             responsive, and visually engaging websites. I combine clean, efficient code
             with vibrant design elements to create projects that are both functional and
