@@ -37,19 +37,35 @@ export default function Navbar() {
       } text-white backdrop-blur-md`}
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center px-6">
-        {/* Logo */}
-       <h1
-  className={`font-extrabold tracking-wide cursor-pointer transition-all duration-300 ${
-    scrolled ? "text-xl" : "text-2xl md:text-3xl"
-  } hover:scale-105`}
->
-  Nir{" "}
-  <span className="bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 bg-clip-text text-transparent font-extrabold">
-    P
-  </span>{" "}
-  Esh <span className="text-yellow-300">Portfolio</span>
-</h1>
-
+        {/* Logo with gradient + glow + emoji pulse */}
+        <h1 className="cursor-pointer flex items-center gap-2 text-3xl md:text-4xl lg:text-5xl">
+          {/* Nir */}
+          <Motion.span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 font-extrabold">
+            Nir
+          </Motion.span>{" "}
+          {/* P with glow */}
+          <Motion.span
+            className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-500 font-extrabold"
+            animate={{
+              textShadow: [
+                "0 0 2px #fff, 0 0 4px #fff, 0 0 6px #ff00ff",
+                "0 0 0px #fff, 0 0 0px #fff, 0 0 0px #ff00ff",
+                "0 0 2px #fff, 0 0 4px #fff, 0 0 6px #ff00ff",
+              ],
+            }}
+            transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
+          >
+            P
+          </Motion.span>{" "}
+          {/* Esh */}
+          <Motion.span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 font-extrabold">
+            Esh
+          </Motion.span>{" "}
+          {/* Pulse emoji */}
+          <Motion.span className="animate-pulse text-3xl md:text-4xl lg:text-5xl">
+            💖
+          </Motion.span>
+        </h1>
 
         {/* Desktop menu */}
         <ul className="hidden md:flex space-x-8 font-semibold">
