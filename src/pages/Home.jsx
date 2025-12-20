@@ -56,14 +56,14 @@ export default function Home() {
             />
           </Motion.div>
 
-          {/* Animated Heading */}
+          {/* Animated Heading (Character by Character, 0.25s per character) */}
           <h2 className="flex flex-wrap justify-center text-3xl md:text-5xl font-extrabold mb-8 z-10">
             {headingText.split("").map((char, index) => (
               <Motion.span
                 key={index}
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.08, duration: 0.5 }}
+                transition={{ delay: index * 0.25, duration: 0.4 }} // 0.25s per character
                 className="bg-gradient-to-r from-purple-600 via-pink-500 to-indigo-600 bg-clip-text text-transparent"
               >
                 {char === " " ? "\u00A0" : char}
@@ -76,7 +76,7 @@ export default function Home() {
             className="text-xl md:text-2xl max-w-3xl md:text-left text-center font-medium text-gray-800 z-10 leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1, duration: 1 }}
+            transition={{ delay: headingText.length * 0.25, duration: 1 }} // appear after heading finishes
           >
             <br />
             I’m a passionate developer creating visually stunning and interactive websites. My journey blends creativity with code, crafting modern user experiences that captivate and inspire. I enjoy exploring new technologies, building responsive layouts, and turning ideas into reality. Each project is a chance to innovate, learn, and leave a meaningful digital impact. With a flair for design and a love for smooth functionality, I strive to make every website both beautiful and user-friendly. I constantly seek new challenges that push my creativity and technical skills. Collaborating with teams inspires me to craft solutions that solve real-world problems. Beyond coding, I am passionate about UI/UX trends and innovative design systems.
