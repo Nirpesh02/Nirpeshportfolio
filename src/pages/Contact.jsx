@@ -113,7 +113,7 @@ export default function Contact() {
     {/* Submit Button */}
     <button
       type="submit"
-      className="w-full bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white px-6 py-3 rounded-lg font-semibold shadow-lg hover:scale-105 transition-transform duration-300"
+      className="w-full bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white px-6 py-3 rounded-lg font-semibold shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer"
     >
       Submit Comment
     </button>
