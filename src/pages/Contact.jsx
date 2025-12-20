@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaFacebook } from "react-icons/fa";
+import { SiTiktok } from "react-icons/si";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -146,32 +147,32 @@ export default function Contact() {
       </div>
 
       {/* Social Media */}
-      <div className="flex justify-center space-x-8 mt-6 text-3xl">
-        <a
-          href="https://github.com/yourusername"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-gray-700 hover:text-purple-500 transition-colors"
-        >
-          <FaGithub />
-        </a>
-        <a
-          href="https://linkedin.com/in/yourusername"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-gray-700 hover:text-blue-500 transition-colors"
-        >
-          <FaLinkedin />
-        </a>
-        <a
-          href="https://twitter.com/yourusername"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-gray-700 hover:text-blue-400 transition-colors"
-        >
-          <FaTwitter />
-        </a>
-      </div>
+<div className="flex justify-center space-x-8 mt-6 text-3xl">
+  <a
+    href="https://github.com/Nirpesh02"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-gray-700 hover:text-purple-500 transition-colors"
+  >
+    <FaGithub />
+  </a>
+  <a
+    href="https://www.facebook.com/share/1CbmteaXLZ/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-gray-700 hover:text-blue-600 transition-colors"
+  >
+    <FaFacebook />
+  </a>
+  <a
+    href="https://www.tiktok.com/@nirpesh02"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-gray-700 hover:text-black transition-colors"
+  >
+    <SiTiktok />
+  </a>
+</div>
 
       <ToastContainer />
     </section>
